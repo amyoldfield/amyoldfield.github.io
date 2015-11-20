@@ -89,7 +89,7 @@
 
     <section id="main-slider">
         <div class="owl-carousel">
-            <div class="item" style="background-image: url(images/tcmc-photos-pro/slider1.jpg);">
+            <div class="item" style="background-image: url(images/tcmc-photos-pro/slider1.jpg);" >
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -106,24 +106,7 @@
                     </div>
                 </div>
             </div><!--/.item-->
-            <div class="item" style="background-image: url(images/tcmc-photos-pro/slider2.jpg);">
-                <div class="slider-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-9 wow fadeInLeft">
-                                <div class="carousel-content">
-                                    <h2>The Cheshire Mobile Cr&egrave;che</h2>
-                                    <p />
-                                    <h3> 'Bespoke event childcare' </h3>
-                                     <p />
-                                    <a class="btn btn-primary btn-lg" href="#services">Tell me More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.item-->
-             <div class="item" style="background-image: url(images/tcmc-photos-pro/slider3.jpg);">
+            <div class="item lazyload" data-bg="images/tcmc-photos-pro/slider2.jpg">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -140,7 +123,7 @@
                     </div>
                 </div>
             </div><!--/.item-->
-            <div class="item" style="background-image: url(images/tcmc-photos-pro/slider4.jpg);">
+             <div class="item lazyload" data-bg="images/tcmc-photos-pro/slider3.jpg">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -157,7 +140,24 @@
                     </div>
                 </div>
             </div><!--/.item-->
-            <div class="item" style="background-image: url(images/tcmc-photos-pro/slider5.jpg);">
+            <div class="item lazyload" data-bg="images/tcmc-photos-pro/slider4.jpg">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-9 wow fadeInLeft">
+                                <div class="carousel-content">
+                                    <h2>The Cheshire Mobile Cr&egrave;che</h2>
+                                    <p />
+                                    <h3> 'Bespoke event childcare' </h3>
+                                     <p />
+                                    <a class="btn btn-primary btn-lg" href="#services">Tell me More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            <div class="item lazyload" data-bg="images/tcmc-photos-pro/slider5.jpg">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
@@ -550,6 +550,15 @@
   ga('create', 'UA-65412000-1', 'auto');
   ga('send', 'pageview');
 
+</script>
+
+<script>
+document.addEventListener('lazybeforeunveil', function(e){
+    var bg = e.target.getAttribute('data-bg');
+    if(bg){
+        e.target.style.backgroundImage = 'url(' + bg + ')';
+    }
+});
 </script>
 
 </body>
