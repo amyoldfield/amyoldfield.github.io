@@ -21,7 +21,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+blockquote {
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
   color: #272727;
@@ -517,7 +518,6 @@ ul.nostyle i {
   transition: none;
 }
 #testimonial {
-  background: #333333 url(../images/testimonial/bg.jpg) no-repeat 0 0;
   background-size: cover;
   padding: 100px 0;
   color: #fff;
@@ -534,23 +534,30 @@ ul.nostyle i {
 #testimonial .btns {
   margin-top: 10px;
 }
+#testimonial blockquote {
+  font-size: 14px;
+}
 #about {
   padding: 100px 0;
 }
-#work-process {
+#news {
   padding: 100px 0 50px;
-  background: #20222e url(../images/work-process/bg.jpg) no-repeat 0 0;
+  background: #20222e;
   background-size: cover;
   color: #fff;
 }
-#work-process h2 {
+#news blockquote {
+  color: #fff;
+  font-size: 15px;
+}
+#news h2 {
   color: #fff;
 }
-#work-process h3 {
+#news h3 {
   color: #fff;
   margin-bottom: 0;
 }
-#work-process .icon-circle {
+#news .icon-circle {
   display: inline-block;
   width: 80px;
   height: 80px;
@@ -559,7 +566,7 @@ ul.nostyle i {
   border-radius: 100px;
   position: relative;
 }
-#work-process .icon-circle > span {
+#news .icon-circle > span {
   border-style: solid;
   border-width: 2px;
   border-color: #45aed6;
@@ -572,7 +579,7 @@ ul.nostyle i {
   top: -12px;
   color: #64686d;
 }
-#work-process h3 {
+#news h3 {
   margin-bottom: 50px;
 }
 #meet-team {
