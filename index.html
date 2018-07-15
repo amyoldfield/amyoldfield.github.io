@@ -57,6 +57,7 @@
 
 <body id="home" class="homepage">
 
+
     <header id="header">
         <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
             <div class="container">
@@ -462,7 +463,13 @@
 
 				<div class="row">
 
-                    <div class="col-sm-6" id="statistics"> <!-- News content is injected in here from the GoogleSpreadsheet--></div>
+                    <!-- old load from GSheet-->
+                    <!-- <div class="col-sm-6" id="statistics"> --> <!-- News content is injected in here from the GoogleSpreadsheet--> <!--</div> -->
+
+                    <div class="col-sm-6">
+                        <div class="fb-page" data-href="https://www.facebook.com/TheCheshireMobileCreche/" data-width="500" data-tabs="timeline" data-small-header="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/TheCheshireMobileCreche/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/TheCheshireMobileCreche/">The Cheshire Mobile Creche</a></blockquote></div>
+                   </div>
+
 
 					<div class="col-sm-6">
 					<a class="twitter-timeline" href="https://twitter.com/TCMobileCreche" data-widget-id="690850262974595072" height="500px">Tweets by @TCMobileCreche</a>
@@ -592,7 +599,7 @@ Her wide range of experiences means she is flexible, adapts easily and responds 
     <script type="text/javascript" src="js/jquery.nanogallery.min.js"></script>
     <script type="text/javascript" src="js/lazysizes.min.js" async=""></script>
 
-    <script src="js/sheetrock.min.js"></script>
+    <!--<script src="js/sheetrock.min.js"></script> required for GSheet load-->
 
 
 
@@ -631,15 +638,28 @@ document.addEventListener('lazybeforeunveil', function(e){
 });
 </script>
 
-<script>
-var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1n-U9UC9lBoViHzjhXa-meCUnqXysFKyVgOtpAcf5n70/pubhtml?gid=0';
+    <!-- Deprecated import of newsfeed from GoogleSpreadsheet TEST-->
+    <!--<script>-->
+    <!--var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1n-U9UC9lBoViHzjhXa-meCUnqXysFKyVgOtpAcf5n70/pubhtml?gid=0';-->
 
-$('#statistics').sheetrock({
-  url: mySpreadsheet,
-  query: "select A,B order by A desc",
-  fetchSize:5
-});
-</script>
+    <!--$('#statistics').sheetrock({-->
+    <!--url: mySpreadsheet,-->
+    <!--query: "select A,B order by A desc",-->
+    <!--fetchSize:5-->
+    <!--});-->
+    <!--</script>-->
+
+    <!-- Facebook Page Plugin https://developers.facebook.com/docs/plugins/page-plugin-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.0';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
 
 </body>
 </html>

@@ -296,7 +296,12 @@ var ssc_uniqueID = function() {
 
 var ischrome = /chrome/.test(navigator.userAgent.toLowerCase());
 
-if (ischrome) {
+// Chrome reports 
+// Registering mousewheel event as passive due to smoothscroll.js usage. The smoothscroll.js library is buggy, no longer necessary and degrades performance. 
+// See https://www.chromestatus.com/feature/5749447073988608 ssc_addEvent @ smoothscroll.js:208
+// apply suggested resolution as below
+
+if (false) {
   ssc_addEvent("mousedown", ssc_mousedown);
   ssc_addEvent("mousewheel", ssc_wheel);
   ssc_addEvent("load", ssc_init)
